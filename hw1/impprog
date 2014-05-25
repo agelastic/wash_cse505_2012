@@ -1,0 +1,7 @@
+x := 5;
+y := 6;
+pushvar y;
+pushvar x;
+x := 7;
+popvar x;
+ans := x

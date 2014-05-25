@@ -1,0 +1,17 @@
+(let newf : int -> (int->int) =
+  (fn ignore : int . 
+     (let r : ref(int) = (ref 0) in
+     (fn c : int. 
+	(let ignore : int = (r := ((!r) + 1)) in
+	 ((!r)+1) > c)))) in
+  (let f1 : int->int = newf 0 in
+  (let f2 : int->int = newf 0 in
+  (let f3 : int->int = f1 in
+  (let i1 : int = f1 2 in
+  (let i2 : int = f3 2 in
+  (let i3 : int = f3 2 in
+  (let i4 : int = f2 3 in
+  (let i5 : int = f2 3 in
+  (let i6 : int = f2 3 in
+   i1+i2+i3+i4+i5+i6))))))))))
+

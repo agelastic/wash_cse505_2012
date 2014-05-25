@@ -1,0 +1,3 @@
+ans := 1;
+x := 5;
+while x (ans := ans * x; x := x + -1)

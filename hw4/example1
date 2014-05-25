@@ -1,0 +1,5 @@
+(let f1 : int->int = (fn i:int.1) in 
+(let r : ref(int->int) = (ref f1) in 
+(let f2: int->int = (fn j:int. (!r) 1) in
+(r := f2) 1 
+)))

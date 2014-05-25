@@ -1,0 +1,9 @@
+(let fact : int->int =
+   (let rec : ref(int->int) = (ref (fn i:int.1)) in 
+   (let f1: int->int = 
+       (fn j:int. 
+           (if (j>1) then (((!rec) (j+(-1))) * j) else 1)) in
+   (rec := f1)
+   ))
+in
+(fact 5))
